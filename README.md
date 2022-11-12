@@ -1,4 +1,4 @@
-# Workshop.Node-Shell
+# Node-Shell
 
 Node.js is a tool that allows us to execute machine processes in Javascript.
 
