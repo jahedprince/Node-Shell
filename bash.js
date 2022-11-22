@@ -8,6 +8,11 @@ const tail = require("./tail");
 
 process.stdout.write("prompt > ");
 
+function done(output) {
+  process.stdout.write(output);
+  process.stdout.write("\nprompt > ");
+}
+
 process.stdin.on("data", (data) => {
   let cmd = data.toString().trim();
   cmd = cmd.split(" ");
@@ -31,8 +36,3 @@ process.stdin.on("data", (data) => {
     process.stdout.write("\nprompt > ");
   }
 });
-
-function done(output) {
-  process.stdout.write(output);
-  process.stdout.write("\nprompt > ");
-}
